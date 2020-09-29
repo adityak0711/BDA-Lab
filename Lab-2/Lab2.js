@@ -30,10 +30,10 @@ db.Employee.find()
 db.Department.find()
 
 //select emp name and dept num where dept num is between 1001 and 1005
-db.Employee.find({DeptNum: {$gt : 1000, $lt : 1006}},{Name:1,DeptNum:1})
+db.Employee.find({DeptNum: {$gt : 1000, $lt : 1006}},{name:1,DeptNum:1})
 
 //find all employees with age greater than 25
 db.Employee.find({age:{$gt:25}})
 
 //find names of all employees with name starting with A
-db.Employee.find({Name:/^A/})
+db.Employee.find({name:/^A/})
