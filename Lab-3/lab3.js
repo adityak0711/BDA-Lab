@@ -26,12 +26,12 @@ db.Customer.insert({cust_id:3,Acc_bal:500,Acc_type:"Z"})
 db.Customer.insert({cust_id:2,Acc_bal:1600,Acc_type:"Z"})
 
 db.Customer.find({Acc_bal:{$gt:1200}, Acc_type:"Z"})
-db.customers.aggregate([
+db.Customer.aggregate([
     {
         $group: {
             _id: "$cust_id",
-            min_bal: {$min: "$acc_bal"},
-            max_bal: {$max: "$acc_bal"}
+            min_bal: {$min: "$Acc_bal"},
+            max_bal: {$max: "$Acc_bal"}
         }
     }
 ]);
