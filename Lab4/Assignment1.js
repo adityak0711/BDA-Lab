@@ -7,6 +7,8 @@ db.books.save({_id:2,Category:"Business Intelligence",BookName:"Fundamentals of 
 db.books.save({_id:3,Category:"Analytics",BookName:"Competing on Analytics",Author:"Thomas",qty:8,price:150,rol:20,pages:150});
 db.books.save({_id:4,Category:"Visualisation",BookName:"Visualising Data",Author:"Ben Fry",qty:12,price:325,rol:6,pages:450});
 
+db.books.find()
+
 db.books.mapReduce(
     function() {
         let key = null, value = null;
